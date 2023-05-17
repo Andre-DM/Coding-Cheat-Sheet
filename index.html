@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Cheatsheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Coding Cheatsheet</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#">HTML</a>
+                        <p style="color: azure; display: inline-block;">~</p>
+                    </li>
+                    <li><a href="css.html">CSS</a>
+                        <p style="color: azure; display: inline-block;">~</p>
+                    </li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </nav>
+            <ul class="nav second">
+                <li><a href="#html-tags">HTML Tags |</a></li>
+                <li><a href="#semantic-tags">Semantic Tags |</a></li>
+                <li><a href="#table-tags">Tables Tags |</a></li>
+                <li><a href="#html-attributes">HTML Attributes |</a></li>
+                <li><a href="#form-tags">HTML Forms (WiP)</a></li>
+            </ul>
+        </header>
+        <main>
+
+            <!-- COMMON TAGS -->
+
+            <h2 id="html-tags">HTML Tags</h2>
+            <p>HTML (HyperText Markup Language) is used to give content to a web page and instructs web browsers on how
+                to structure that content. The syntax for a single HTML tag is an opening angle bracket '<' followed by
+                    the element name and a closing angle bracket '>'.
+            </p>
+            <h3>Common HTML Tags</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">&lt;html&gt;</span></td>
+                        <td>html document root tag</td>
+                        <td>The &lt;html&gt; element will contain all of your HTML code.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;head&gt;</span></td>
+                        <td>head</td>
+                        <td>Information about the web page (metadata), like the title, belongs within the <span
+                                class="tag">&lt;head&gt;</span> of
+                            the page.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;title&gt;</span></td>
+                        <td>title</td>
+                        <td>You can add a title to your web page by using the <span class="tag">&lt;title&gt;</span>
+                            element, inside of the head.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;body&gt;</span></td>
+                        <td>body</td>
+                        <td>Any visible content should be placed within the opening and closing <span
+                                class="tag">&lt;body&gt;</span> tags</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;...</span></td>
+                        <td>heading</td>
+                        <td>HTML can use six different levels of heading elements. The heading elements are ordered from
+                            the highest level <span class="tag">&lt;h1&gt;</span> to the lowest level <span
+                                class="tag">&lt;h6&gt;</span>.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;p&gt;</span></td>
+                        <td>paragraph</td>
+                        <td>Contains and displays a block of text.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;ol&gt;</span></td>
+                        <td>ordered list</td>
+                        <td>Creates a list of items in sequential order. Each list item appears numbered by default.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;ul&gt;</span></td>
+                        <td>unordered list</td>
+                        <td>Is used to create a list of items in no particular order. Each individual list item will
+                            have a bullet point by default.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;li&gt;</span></td>
+                        <td>list item</td>
+                        <td>Creates a list item inside the Ordered List <span class="tag">&lt;ol&gt;</span> and
+                            Unordered List <span class="tag">&lt;ul&gt;</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;img&gt;</span></td>
+                        <td>image</td>
+                        <td>Images can be added by linking to an existing source using the <span class="tag">src</span>
+                            attribute, which is mandatory. <span class="tag">&lt;img&gt;</span> is an <em>empty
+                                element</em> meaning it should not have a closing tag.
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;a&gt;</span></td>
+                        <td>anchor</td>
+                        <td>Is used to create hyperlinks in an HTML document. The hyperlinks can point to other
+                            webpages, files on the same server, a location on the same page, or any other URL via the
+                            hyperlink reference attribute <span class="tag">href</span>.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;div&gt;</span></td>
+                        <td>division</td>
+                        <td>Short for “division” or a container that divides the page into sections. These sections are
+                            very useful for grouping elements in your HTML together.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;span&gt;</span></td>
+                        <td>span</td>
+                        <td>Is an inline container for text and can be used to group text for styling purposes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;br&gt;</span></td>
+                        <td>line break</td>
+                        <td>Will create a line break in text and is especially useful where a division of text is
+                            required, like in a postal address. The line break element requires only an opening tag and
+                            must not have a closing tag.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- SEMANTIC TAGS-->
+
+            <h3 id="semantic-tags">Semantic HTML Tags</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">&lt;header&gt;</span></td>
+                        <td>header</td>
+                        <td>Defines a header for a document; provides basic structure of the webpage and enables screen
+                            readers to translate the webpage and improves your website's SEO.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;main&gt;</span></td>
+                        <td>main</td>
+                        <td>Specifies the main content of a document; provides basic structure of the webpage and
+                            enables
+                            screen readers to translate the webpage and improves your website's SEO.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;footer&gt;</span></td>
+                        <td>footer</td>
+                        <td>Defines a footer for a document; provides basic structure of the webpage and enables screen
+                            readers to translate the webpage and improves your website's SEO.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;section&gt;</span></td>
+                        <td>section</td>
+                        <td>Defines elements in a document, such as chapters, headings, or any other area of the
+                            document
+                            with the same theme.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;article&gt;</span></td>
+                        <td>article</td>
+                        <td>Holds content that makes sense on its own such as articles, blogs, comments, etc.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;aside&gt;</span></td>
+                        <td>aside</td>
+                        <td>Contains information that is related to the main content, but not required in order to
+                            understand the dominant information.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- TABLE TAGS -->
+
+            <h2 id="table-tags">HTML Table Tags</h2>
+            <p>The HTML tables allow web authors to arrange data like text, images, links, other tables, etc. into rows
+                and columns of cells.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Attributes</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">&lt;table&gt;</span></td>
+                        <td></td>
+                        <td>The main element of the table.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;thead&gt;</span></td>
+                        <td></td>
+                        <td>Table Heading Element - Defines the headings of table columns encapsulated in table rows.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;tbody&gt;</span></td>
+                        <td></td>
+                        <td>Table Body Element - It is a semantic element that will contain all table data other than
+                            table heading and table footer content. </td>
+                    </tr>
+                    <tr>
+                        <td> <span class="tag">&lt;tfoot&gt;</span></td>
+                        <td></td>
+                        <td>Table Footer Element - Uses table rows to give footer content or to summarize content at the
+                            end of a table.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;tr&gt;</span></td>
+                        <td></td>
+                        <td>Table Row - Is used to add rows to a table before adding table data and table headings.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;th&gt;</span></td>
+                        <td><span class="tag">colspan</span>, <span class="tag">rowspan</span></td>
+                        <td>Table Heading Element - Is used to add titles to rows and columns of a table and must be
+                            enclosed in a table row element <span class="tag">&lt;tr&gt;</span>.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">&lt;td&gt;</span></td>
+                        <td><span class="tag">colspan</span>, <span class="tag">rowspan</span></td>
+                        <td>Table Data - Can be nested inside a table row element <span class="tag">&lt;tr&gt;</span> to
+                            add a cell of data to a table.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- ATTRIBUTES -->
+
+            <h2 id="html-attributes">HTML Attributes</h2>
+            <p>HTML attributes are values added to the opening tag of an element to configure the element or change the
+                element's default behavior. </p>
+            <h3>Common HTML Attributes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Belongs to</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">class</span></td>
+                        <td>global attribute</td>
+                        <td>Specifies one or more classnames for an element (refers to a class in a style sheet).</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">id</span></td>
+                        <td>global attribute</td>
+                        <td>When needed, the id value can be called upon by CSS and
+                            JavaScript to manipulate, format, and perform specific instructions on that element and that
+                            element only.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">style</span></td>
+                        <td>global attribute</td>
+                        <td>Specifies an inline CSS style for an element.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">href</span></td>
+                        <td><span class="tag">&lt;a&gt;</span>, <span class="tag">&lt;link&gt;</span></td>
+                        <td>The href determines the location the anchor element points to.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">src</span></td>
+                        <td><span class="tag">&lt;img&gt;</span>, <span class="tag">&lt;input&gt;</span></td>
+                        <td>Specifies the URL of a media file.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">type</span></td>
+                        <td><span class="tag">&lt;a&gt;</span>, <span class="tag">&lt;button&gt;</span>, <span
+                                class="tag">&lt;input&gt;</span>, <span class="tag">&lt;link&gt;</span></td>
+                        <td>Specifies the type of the element; for example, the <span class="tag">&lt;input
+                                type="text"&gt;</span> specifies that text is to be inputted into a form.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">alt</span></td>
+                        <td><span class="tag">&lt;img&gt;</span></td>
+                        <td>Specifies an alternate text when the original element fails to display</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">target</span></td>
+                        <td><span class="tag">&lt;a&gt;</span>, <span class="tag">&lt;form&gt;</span></td>
+                        <td>Specifies where a hyperlink should be opened. A target value of <span
+                                class="tag">"_blank"</span> will tell the browser to open the hyperlink in a new tab in
+                            modern browsers. Also specifies where to submit a form.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">colspan</span></td>
+                        <td><span class="tag">&lt;th&gt;</span>, <span class="tag">&lt;td&gt;</span></td>
+                        <td>Indicates how many columns that particular cell should span within the table.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">rowspan</span></td>
+                        <td><span class="tag">&lt;th&gt;</span>, <span class="tag">&lt;td&gt;</span></td>
+                        <td>Similar to <span class="tag">colspan</span>, indicates how many rows that particular cell
+                            should span within the table.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <div>
+                <ul class="contact">
+                    <li>Coded by: Andrea Di Matteo |</li>
+                    <li><a href="https://www.codecademy.com/profiles/Shivian_">Codecademy Profile</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

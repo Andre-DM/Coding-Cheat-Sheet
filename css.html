@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Cheatsheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/css.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Coding Cheatsheet</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html">HTML</a>
+                        <p style="color: azure; display: inline-block;">~</p>
+                    </li>
+                    <li><a href="#">CSS</a>
+                        <p style="color: azure; display: inline-block;">~</p>
+                    </li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </nav>
+            <ul class="nav second">
+                <li><a href="#css-selectors">CSS Selectors |</a></li>
+                <li><a href="#common-properties">Common Properties |</a></li>
+                <li><a href="#box-model">The Box Model |</a></li>
+                <li><a href="#positioning">Positioning</a></li>
+            </ul>
+        </header>
+        <main>
+
+            <!-- CSS SELECTORS -->
+
+            <h2 id="css-selectors">Selectors</h2>
+            <p>CSS, or Cascading Style Sheets, is a language that is used in combination with HTML that customizes how HTML elements will appear. CSS can define styles and change the layout and design of a sheet.
+            </p>
+            <h3>Common Selectors</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">element</span></td>
+                        <td>Type</td>
+                        <td>CSS type selectors are used to match all elements of a given type or tag name. When using type selectors, elements are matched regardless of their nesting level in the HTML.</td>
+                        <td class="tag">h1 {<br> css properties <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">.class</span></td>
+                        <td>Class</td>
+                        <td>The CSS class selector matches elements based on the contents of their class attribute. For selecting elements a '.' needs to be prepended.</td>
+                        <td class="tag">.container {<br> css properties <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">#id</span></td>
+                        <td>Id</td>
+                        <td>The CSS ID selector matches elements based on the contents of their id attribute. The values of id attribute should be unique in the entire DOM. For selecting the element a '#' needs to be prepended.
+                        </td>
+                        <td class="tag">#button {<br> css properties <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">*</span></td>
+                        <td>Universal</td>
+                        <td>As the name suggests, Universal Selector in CSS is used to select all the elements on the HTML page. It's useful for resetting paddings and margins, and adjusting the box model.</td>
+                        <td class="tag">* {<br> css properties <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">element[attr.]</span></td>
+                        <td>Attribute</td>
+                        <td>The CSS attribute selector matches elements based on the presence or value of a given attribute.</td>
+                        <td class="tag">a[href="#"] {<br> css properties <br>}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="explanation">
+                <h3>Selector Specificity</h3>
+                <p>Specificity is a ranking system that is used when there are multiple conflicting property values that point to the same element. When determining which rule to apply, the selector with the highest specificity wins out. The most specific selector type is the ID selector, followed by class selectors, followed by type selectors. In this example, only color: blue will be implemented as it has an ID selector whereas color: red has a type selector.</p>
+            </div>
+            <h3>Combinators & Intermediate Selectors</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">element.class</span></td>
+                        <td>Chain</td>
+                        <td>CSS selectors can be chained so that rule sets apply only to elements that match all criteria. For instance, to select <span class="tag">&lt;h3&gt;</span> elements that also have the 'section-heading' class, the selector <span class="tag">h3.section-heading</span> can be used.</td>
+                        <td class="tag">h3.section-heading {<br> css properties <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">element element</span></td>
+                        <td>Descendant</td>
+                        <td>Is used to match elements that are descended from another matched selector. They are denoted by a single space between each selector and the descended selector. All matching elements are selected regardless of the nesting level in the HTML.</td>
+                        <td class="tag">div p {<br> css properties <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">element, <br>element</span></td>
+                        <td>Group</td>
+                        <td>Match multiple selectors to the same CSS rule, using a comma-separated list. In this example, the properties for both h1 and h2 will be modified.</td>
+                        <td class="tag">h1,h2 {<br> css properties <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">element &gt; element</span></td>
+                        <td>Child</td>
+                        <td>The child selector in CSS is used to select elements in a webpage that are the direct children of a specified element.
+                        </td>
+                        <td class="tag">div &gt; h1 {<br> css properties <br>}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- COMMON PROPERTIES -->
+
+            <h2 id="common-properties">Common Properties</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">color</span></td>
+                        <td>Color name keywords can be used to set color property values for elements in CSS.</td>
+                        <td class="tag">h1 {<br> color: goldenrod;<br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">background-color</span></td>
+                        <td>Controls the background color of elements.</td>
+                        <td class="tag">div {<br> background-color: lightgreen;<b}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">background-image</span></td>
+                        <td>sets the background image of an element. An image URL should be provided in the syntax url("#") as the value of the property.
+                        </td>
+                        <td class="tag">body {<br> background-image: url("#");<br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">width</span></td>
+                        <td>The width property in CSS specifies the width of the element's content area. This “content” area is the portion inside the padding, border, and margin of an element (the <a href="#box-model">Box Model</a>).</td>
+                        <td class="tag">div {<br> width: 600px;<br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">height</span></td>
+                        <td>Same as <span class="tag">width</span>, the <span class="tag">height</span> property in CSS specifies the height of the element's content area.</td>
+                        <td class="tag">img[src="#"] {<br> css properties <br>}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Typography</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">font-family</span></td>
+                        <td>Is used to specify the typeface in a rule set. Fonts must be available to the browser to display correctly, either on the computer or linked as a web font. If a font value is not available, browsers will display their default font. When using a multi-word font name, it is best practice to wrap them in quotes.</td>
+                        <td class="tag">h1 {<br> font-family: Helvetica; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">font-size</span></td>
+                        <td>Is used to set text sizes. Font size values can be many different units or types such as pixels.</td>
+                        <td class="tag">p {<br> font-size: 16px; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">font-weight</span></td>
+                        <td>Can be used to set the weight (boldness) of text. The provided value can be a keyword such as <span class="tag">bold</span> or <span class="tag">normal</span>.
+                        </td>
+                        <td class="tag">h2 {<br> font-weight: bold; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">text-align</span></td>
+                        <td>Can be used to set the text alignment of inline contents. This property can be set to these values: <span class="tag">left</span>, <span class="tag">right</span>, <span class="tag">center</span>, or <span class="tag">justify</span>.</td>
+                        <td class="tag">p {<br> text-align: center; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">font-style</span></td>
+                        <td>determines the font style in which text will appear. It accepts <span class="tag">italic</span> as a value to set the font style to italic.</td>
+                        <td class="tag">.quote {<br> font-style: italic; <br>}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- THE BOX MODEL -->
+
+            <h2 id="box-model">The Box Model</h2>
+            <div class="explanation">
+                <p>The CSS box model is a container that contains multiple properties including borders, margins, padding, and the content itself. It is used to create the design and layout of web pages. It can be used as a toolkit for customizing the layout of different elements. The web browser renders every element as a rectangular box according to the CSS box model.</p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">padding</span></td>
+                        <td>Defines the innermost portion of the box model, creating space around an element's content, inside of any defined margins and/or borders.Padding values are set using lengths or percentages, and cannot accept negative values. We can set the different sizes of margins for individual sides with <span class="tag">padding-top</span>, <span class="tag">padding-right</span>, <span class="tag">padding-bottom</span>, and <span class="tag">padding-left</span>.</td>
+                        <td class="tag">header {<br> padding: 10px; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">border</span></td>
+                        <td>The border shorthand CSS property sets an element's border. It sets the values of <span class="tag">border-width</span>, <span class="tag">border-style</span>, <span class="tag">and border-color</span>. We can set the different values of borders for individual sides with <span class="tag">border-top</span>, <span class="tag">border-right</span>, <span class="tag">border-bottom</span>, and <span class="tag">border-left</span>.</td>
+                        <td class="tag">nav {<br> border: 1px solid black; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">margin</span></td>
+                        <td>The margin property defines the outermost portion of the box model, creating space around an element, outside of any defined borders. Margins are set using lengths, percentages, or the keyword auto and can have negative values. We can set the different sizes of margins for individual sides with <span class="tag">margin-top</span>, <span class="tag">margin-right</span>, <span class="tag">margin-bottom</span>, and <span class="tag">margin-left</span>.
+                        </td>
+                        <td class="tag">h2 {<br> margin: 20px; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">overflow</span></td>
+                        <td>If content is too large for its container, the CSS overflow property will determine how the browser handles the problem. It can be set to <span class="tag">hidden</span>, or to <span class="tag">scroll</span>, which will make the overflowing content accessible via scroll bars within the original container.</td>
+                        <td class="tag">p {<br> text-align: center; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">box-sizing</span></td>
+                        <td>Controls which aspect of the box is determined by the <span class="tag">height</span> and <span class="tag">width</span> properties. The default value of this property is <span class="tag">content-box</span>, which renders the actual size of the element including the content box; but not the paddings and borders. The value <span class="tag">border-box</span> corresponds directly to the element's total rendered size, including padding and border with the height and width properties.</td>
+                        <td class="tag">* {<br> box-sizing: border-box; <br>}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- POSITIONING -->
+
+            <h2 id="positioning">Positioning</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="tag">display</span></td>
+                        <td>Determines the type of render block for an element. The most common values for this property are <span class="tag">block</span>, <span class="tag">inline</span>, and <span class="tag">inline-block</span>.
+                            <br>
+                            <em>Block-level</em> elements take up the full width of their container with line breaks before and after, and can have their height and width manually adjusted.
+                            <br>
+                            <em>Inline elements</em> take up as little space as possible, flow horizontally, and cannot have their width or height manually adjusted.
+                            <br>
+                            <em>Inline-block</em> elements can appear next to each other, and can have their width and height manually adjusted.</td>
+                        <td class="tag">li {<br> display: inline-block; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">position</span></td>
+                        <td>The position property can help you manipulate the location of an element. Check the values below for more details.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">relative</span></td>
+                        <td>Enables an element to be positioned relative to where it would have originally been on a web page. The offset properties (<span class="tag">top</span>, <span class="tag">right</span>, <span class="tag">bottom</span>, <span class="tag">left</span>) can be used to determine the actual position of the element relative to its original position.
+                        </td>
+                        <td class="tag">div {<br> position: relative;<br>top: 15px; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">absolute</span></td>
+                        <td>Enables an element to ignore sibling elements and instead be positioned relative to its closest parent element that is positioned with <span class="tag">relative</span> or <span class="tag">absolute</span>. The <span class="tag">absolute</span> value removes an element entirely from the document flow. </td>
+                        <td class="tag">ul {<br> position: absolute;<br>left: 20px;<br>bottom: 50px; <br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">fixed</span></td>
+                        <td>When the CSS position has a value of <span class="tag">fixed</span>, it is set/pinned to a specific spot on a page. The fixed element stays the same regardless of scrolling. The navigation bar is a great example of an element that is often set to <span class="tag">position: fixed;</span>, enabling the user to scroll through the web page and still access the navigation bar.</td>
+                        <td class="tag">nav {<br> position: fixed;<br>top: 0;<br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">sticky</span></td>
+                        <td>The element is treated like a <span class="tag">relative</span> value until the scroll location of the viewport reaches a specified threshold, at which point the element takes a fixed position where it is told to stick.</td>
+                        <td class="tag">.scroll-up {<br> position: sticky;<br>right: 10;<br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">z-index</span></td>
+                        <td>Specifies how far back or how far forward an element will appear on a web page when it overlaps other elements. The <span class="tag">z-index</span> property uses integer values, which can be positive or negative values. The element with the highest value will be at the foreground, while the element with the lowest value will be at the back.</td>
+                        <td class="tag">div {<br> z-index: 1;<br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">float</span></td>
+                        <td>Determines how far left or how far right an element should float within its parent element. The value <span class="tag">left</span> floats an element to the left side of its container and the value <span class="tag">right</span> floats an element to the right side of its container. For the property <span class="tag">float</span>, the width of the container must be specified or the element will assume the full width of its containing element.
+                        </td>
+                        <td class="tag">img {<br> float: right;<br>}</td>
+                    </tr>
+                    <tr>
+                        <td><span class="tag">clear</span></td>
+                        <td>Specifies how an element should behave when it bumps into another element within the same containing element. The clear is usually used in combination with elements having the CSS <span class="tag">float</span> property. This determines on which sides floating elements are allowed to float.
+                        </td>
+                        <td class="tag">img {<br> clear: left;<br>}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <div>
+                <ul class="contact">
+                    <li>Coded by: Andrea Di Matteo |</li>
+                    <li><a href="https://www.codecademy.com/profiles/Shivian_">Codecademy Profile</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
