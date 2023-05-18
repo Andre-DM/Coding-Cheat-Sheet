@@ -10,24 +10,24 @@
     <div class="container">
         <header>
             <h1>Coding Cheatsheet</h1>
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html">HTML</a>
-                        <p style="color: azure; display: inline-block;">~</p>
-                    </li>
-                    <li><a href="#">CSS</a>
-                        <p style="color: azure; display: inline-block;">~</p>
-                    </li>
-                    <li><a href="#">JavaScript</a></li>
-                </ul>
-            </nav>
-            <ul class="nav second">
-                <li><a href="#css-selectors">CSS Selectors |</a></li>
+            <ul class="links">
+                <li><a href="index.html">HTML</a>
+                    <p style="color: azure; display: inline-block;">~</p>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <p style="color: azure; display: inline-block;">~</p>
+                </li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#css-selectors">Selectors |</a></li>
                 <li><a href="#common-properties">Common Properties |</a></li>
                 <li><a href="#box-model">The Box Model |</a></li>
                 <li><a href="#positioning">Positioning</a></li>
             </ul>
-        </header>
+        </nav>
         <main>
 
             <!-- CSS SELECTORS -->
@@ -142,7 +142,7 @@
                     <tr>
                         <td><span class="tag">background-color</span></td>
                         <td>Controls the background color of elements.</td>
-                        <td class="tag">div {<br> background-color: lightgreen;<b}</td>
+                        <td class="tag">div {<br> background-color: lightgreen;<br>}</td>
                     </tr>
                     <tr>
                         <td><span class="tag">background-image</span></td>
@@ -271,7 +271,7 @@
                     <tr>
                         <td><span class="tag">position</span></td>
                         <td>The position property can help you manipulate the location of an element. Check the values below for more details.</td>
-                        <td></td>
+                        <td style="border-bottom: 1px dashed;"></td>
                     </tr>
                     <tr>
                         <td><span class="tag">relative</span></td>
@@ -282,7 +282,7 @@
                     <tr>
                         <td><span class="tag">absolute</span></td>
                         <td>Enables an element to ignore sibling elements and instead be positioned relative to its closest parent element that is positioned with <span class="tag">relative</span> or <span class="tag">absolute</span>. The <span class="tag">absolute</span> value removes an element entirely from the document flow. </td>
-                        <td class="tag">ul {<br> position: absolute;<br>left: 20px;<br>bottom: 50px; <br>}</td>
+                        <td class="tag position">ul {<br> position: absolute;<br>left: 20px;<br>bottom: 50px; <br>}</td>
                     </tr>
                     <tr>
                         <td><span class="tag">fixed</span></td>
